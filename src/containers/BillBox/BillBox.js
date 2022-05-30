@@ -42,7 +42,7 @@ const BillBox = props => {
         let mb = monthlyBudget;
         for(let i in newBills){
             if(Number(newBills[i].amount) > mb){
-                break;
+                continue;
             }
             mb -= Number(newBills[i].amount);
             content.push(
@@ -110,7 +110,7 @@ const BillBox = props => {
                 </select>
                 <div>
                     <label>Monthly Budget</label>&nbsp;&nbsp;
-                    <input className = {styles.inputStyle} type = 'number' value = {monthlyBudget} onChange = {event => dispatch(setMonthlyBudget(Number(event.target.value)))} placeholder = 'Ex: 50000' />&nbsp;&nbsp;
+                    <input className = {styles.inputStyle} type = 'text' value = {String(monthlyBudget)} onChange = {event => dispatch(setMonthlyBudget(Number(event.target.value)))} placeholder = 'Ex: 50000' />&nbsp;&nbsp;
                     <button onClick = {handlerForBillsPay} className = {styles.btns}>{showBillsToPay ? 'Cancel' : 'Click To Check'}</button>
                 </div>
                 <button onClick = {() => dispatch(openAddEditModal())} className = {styles.btns}>Add Bill</button>
