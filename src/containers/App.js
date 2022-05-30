@@ -4,6 +4,7 @@ import styles from './App.module.css';
 
 import Navigation from '../components/Navigation/Navigation';
 import BillBox from './BillBox/BillBox';
+import ColumnChart from '../components/ColumnChart/ColumnChart';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         {/* home page with all the existing bills*/}
         <Route path = '/' element = {<BillBox />} />
+        <Route path = '/:id' element = {<ColumnChart />} />|
       </Routes>
     </div>
   );
