@@ -11,7 +11,7 @@ import AddEditBill from '../../components/AddEditBill/AddEditBill';
 
 
 const BillBox = props => {
-    const {bills, selectedFilter, showAddEditModal, editing, editBillId, filters, monthlyBudget, showBillsToPay} = useSelector(store => store.bill);
+    const {bills, selectedFilter, showAddEditModal, totalBillAmount, editing, editBillId, filters, monthlyBudget, showBillsToPay} = useSelector(store => store.bill);
     const dispatch = useDispatch();
 
     // storing the data for bills locally...
@@ -99,6 +99,9 @@ const BillBox = props => {
     return(
         <React.Fragment>
             {showAddEditModal ? <AddEditBill bill = {editableBill} edit = {editing} /> : null}
+            <div style = {{marginLeft: '25%', marginTop: '50px'}}>
+                Total Amount: Rs. {totalBillAmount}
+            </div>
             <div className = {styles.btnHeader}>
                 <select value = {selectedFilter} name = 'filters' onChange = {event => changeHandler(event)}>
                     {filters.map((filter, index) => (
