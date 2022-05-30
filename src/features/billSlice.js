@@ -42,6 +42,12 @@ const billSlice = createSlice({
       );
       state.bills[billIndex] = action.payload;
       state.editing = false;
+      const findFilter = state.filters.find(
+        (filter) =>
+          filter.toLowerCase() === action.payload.category.toLowerCase()
+      );
+      if (!findFilter) state.filters.push(action.payload.category);
+      localStorage.setItem("bills", JSON.stringify(state.bills));
     },
     deleteBill: (state, action) => {
       const newBills = state.bills.filter((bill) => bill.id !== action.payload);
