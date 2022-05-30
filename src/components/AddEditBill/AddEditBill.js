@@ -16,6 +16,7 @@ const AddEditBill = props => {
             dispatch(descriptionAction(props.bill.description));
             dispatch(categoryAction(props.bill.category));
             dispatch(amountAction(props.bill.amount));
+            dispatch(dateAction(props.bill.date))
         }
     }, [editBillId]);
 

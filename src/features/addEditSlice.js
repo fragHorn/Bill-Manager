@@ -21,6 +21,7 @@ const addEditSlice = createSlice({
             state.category = action.payload;
         },
         dateAction: (state, action) => {
+            console.log(action)
             state.date = action.payload;
         },
         clearVals: (state, action) => {
