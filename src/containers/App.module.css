@@ -1,0 +1,20 @@
+@font-face {
+  font-family: myFont;
+  src: url('../assets/fonts/Gobold_Regular.otf');
+}
+
+@font-face {
+  font-family: myFont2;
+  src: url('../assets/fonts/Product_Sans.ttf');
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+  font-family: myFont2;
+  overflow-x: hidden;
+}
+
+.App{
+  width: 100vw;
+}

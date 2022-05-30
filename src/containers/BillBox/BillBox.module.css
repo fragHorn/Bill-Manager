@@ -1,0 +1,43 @@
+.btnHeader{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.btnHeader > select{
+    height: 40px;       
+    padding: 0px 5px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    background-color: aliceblue;
+    font-family: myFont2;
+    box-sizing: border-box;
+}
+
+.btns {
+    border-radius: 10px;
+    /* width: 100px; */
+    padding: 10px 5px;
+    background-color: antiquewhite;
+    font-family: myFont2;
+    font-size: 1.1rem;
+}
+
+.btns:hover, .btnHeader > select{
+    cursor: pointer;
+}
+
+.container{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.inputStyle{
+    padding: 10px 10px;
+}

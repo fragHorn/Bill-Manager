@@ -1,0 +1,48 @@
+.backdrop{
+    height: 100%;
+    width: 100vw;
+    z-index: 10;
+    background-color: rgba(102, 102, 102, 0.292);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+
+.formContainer{
+    position: fixed;
+    padding: 10px 20px;
+    top: 15%;
+    height: 70%;
+    left: 25%;
+    width: 50%;
+    z-index: 100;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.formContainer > form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer > form > input{
+    padding: 10px 10px;
+    margin: 7px 0px 15px 0px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+.formContainer > form >button{
+    padding: 10px 10px;
+    width: fit-content;
+    margin: auto;
+    background-color: aquamarine;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid grey;
+}
+
+.formContainer > form > button:hover{
+    cursor: pointer;
+}

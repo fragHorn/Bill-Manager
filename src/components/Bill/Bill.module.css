@@ -1,0 +1,23 @@
+.billContainer{
+    width: 100%;
+    box-shadow: 0px 0px 10px 5px rgb(234, 234, 234);
+    border-radius: 10px;
+    padding: 10px 0px 20px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.details{
+    width: 80%;
+}
+
+
+.options > button{
+    background-color: transparent;
+    border: none;
+}
+
+.options >button:hover{
+    cursor: pointer;
+}
