@@ -48,7 +48,6 @@ const BillBox = props => {
             content.push(
                 <Bill key = {newBills[i].id} {...newBills[i]} /> 
             );
-            console.log(newBills[i]);
         }
         if(content.length === 0){
             content = 'No bills with amount under Rs. ' + monthlyBudget;

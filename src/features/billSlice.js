@@ -48,6 +48,7 @@ const billSlice = createSlice({
       );
       if (!findFilter) state.filters.push(action.payload.category);
       localStorage.setItem("bills", JSON.stringify(state.bills));
+      state.editing = false;
     },
     deleteBill: (state, action) => {
       const newBills = state.bills.filter((bill) => bill.id !== action.payload);
@@ -66,6 +67,7 @@ const billSlice = createSlice({
     },
     closeAddEditModal: (state, { payload }) => {
       state.showAddEditModal = false;
+      state.editing = false;
     },
     applyFilter: (state, action) => {
       state.selectedFilter = action.payload;
